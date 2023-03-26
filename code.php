@@ -4,18 +4,15 @@ if (isset($_POST['save_excel_data'])) {
     $fileName = $_FILES['import_file']['name'];
     $file_ext = pathinfo($fileName, PATHINFO_EXTENSION);
     $inputFileNamePath = $_FILES['import_file']['tmp_name'];
-
     // if (isset($_POST['save_excel_data'])) {
     // $fileName = $_FILES['import_file']['name'];
     // $file_ext = pathinfo($fileName, PATHINFO_EXTENSION);
     //$file_ext = "file.221115102214851";
-
-
     $file_contents = file($inputFileNamePath);
     // foreach ($file_contents as &$line) {
     //     $line = trim($line);
-    $ZZ = substr_replace($file_contents, 'MAD', 11, 14);
-    $string = implode("\n", $ZZ);
+    $strep = substr_replace($file_contents, 'MAD', 11, 14);
+    $string = implode("\n", $strep);
     // for($i=0;$i< count($ZZ);$i++){
 
     // }
